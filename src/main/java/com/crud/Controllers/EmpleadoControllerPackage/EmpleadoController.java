@@ -46,8 +46,7 @@ public class EmpleadoController {
         empleado.setDireccion_empleado(empleadoDetails.getDireccion_empleado());
         empleado.setCodigo_tienda(empleadoDetails.getCodigo_tienda());
 
-        Empleados updatedEmpleado = empleadoRepository.save(empleado);
-        return updatedEmpleado;
+        return empleadoRepository.save(empleado);
     }
 
     @DeleteMapping("/empleado/{codigo_empleado}")
