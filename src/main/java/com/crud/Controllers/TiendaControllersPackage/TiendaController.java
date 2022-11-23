@@ -47,8 +47,7 @@ public class TiendaController {
         tienda.setEstado(tiendaDetails.getEstado());
         tienda.setCantidad_empleado(tiendaDetails.getCantidad_empleado());
 
-        Tiendas updatedTienda = tiendaRepository.save(tienda);
-        return updatedTienda;
+        return tiendaRepository.save(tienda);
     }
 
     @DeleteMapping("/tienda/{codigo_tienda}")
